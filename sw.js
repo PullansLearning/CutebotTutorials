@@ -1,7 +1,7 @@
 /* sw.js — engine/tools/gen_site_chrome.py 가 생성한다. 손대지 말 것.
  * 단일 입력 = course.config.yaml `site:` · 계약 = engine/docs/site_chrome.md
  */
-var CACHE = 'cutebot-stem-2ec41d98';
+var CACHE = 'cutebot-stem-v2';
 var SHELL = [
   "./",
   "_assets/css/cb-home.css",
@@ -19,6 +19,7 @@ var SHELL = [
   "_assets/js/edux-build.js",
   "_assets/js/edux-center.js",
   "_assets/js/edux-chrome.js",
+  "_assets/js/cb-progress-pdf.js",
   "_assets/js/edux-puzzle.js",
   "_assets/js/hero-object.js",
   "_assets/js/mb-lesson.js",

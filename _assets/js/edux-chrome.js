@@ -29,7 +29,6 @@ var I18N_EN = {
 'skip.lesson': 'Skip to the lesson',
 'skip.checkup': 'Skip to the check-up',
 'footer.nav': 'Footer',
-'footer.credit': 'This site is developed and run with the support of CAMA.',
 'textsize.label': 'Text size',
 'textsize.glyph': 'Aa',
 'textsize.pct': '{n} percent',
@@ -789,8 +788,6 @@ el.innerHTML =
 '</div>' +
 '</div>' +
 pills +
-'<p class="footer-credit"><span class="footer-credit__mark" aria-hidden="true"></span>' +
-'<span>' + TH('footer.credit') + '</span></p>' +
 '</div></footer>';
 if (wantOffline) _offAuto();
 ready(function () { soundsSlot(el, variant); });
