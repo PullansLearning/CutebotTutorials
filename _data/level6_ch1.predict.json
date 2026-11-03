@@ -1,0 +1,1 @@
+{"asks": {"p1": {"correct": "B", "why": "With no light the test is true every time round the loop, so `turn left` runs again and again — the car keeps turning round. That turning is the search: it keeps changing which way it faces until a bright direction shows up."}}}

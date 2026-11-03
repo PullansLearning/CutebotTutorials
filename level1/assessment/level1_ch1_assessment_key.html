@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en" data-edux-account="cb:" data-edux-login="../../progress.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Check-up · Level 1 · Chapter 1 — Meet Your Cutebot — Teacher page</title>
+<link rel="preload" href="../../_assets/fonts/baloo2.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../_assets/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="description" content="Teacher Guide and check-up answer key">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://pullanslearning.github.io/CutebotTutorials/level1/assessment/level1_ch1_assessment_key">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Micro:bit with Cutebot">
+<meta property="og:title" content="Teacher page — Level 1 · Chapter 1">
+<meta property="og:description" content="Teacher Guide and check-up answer key">
+<meta property="og:url" content="https://pullanslearning.github.io/CutebotTutorials/level1/assessment/level1_ch1_assessment_key">
+<meta property="og:image" content="https://pullanslearning.github.io/CutebotTutorials/_assets/icons/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Micro:bit with Cutebot — The code stops being a picture on a screen. It becomes a car that moves.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Teacher page — Level 1 · Chapter 1">
+<meta name="twitter:description" content="Teacher Guide and check-up answer key">
+<meta name="twitter:image" content="https://pullanslearning.github.io/CutebotTutorials/_assets/icons/og.png">
+<meta name="theme-color" content="#0a5718">
+<link rel="icon" href="../../_assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../_assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="../../manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Cutebot">
+<script defer src="../../_assets/js/edux-center.js?v=a5d7326a"></script>
+<script defer src="../../_assets/js/edux-buddy.js?v=0ff6d56a" data-x="../../_assets/js/edux-buddy-extra.js?v=6fa576db" data-l="../../_assets/js/edux-buddy-lines.js?v=e0f2cd04"></script>
+<link rel="stylesheet" href="../../_assets/css/cutebot.css?v=d442594d">
+<script src="../../_assets/js/edux-chrome.js?v=b8e2b2c5"></script>
+<style>:root{ --level:#efc340; --level-deep:#735703; --level-soft:#fdeec2; --level-ink:#3d2f03; }
+body{ background:var(--color-bg); color:var(--color-ink); overflow-x:hidden; }</style>
+</head>
+<body>
+
+
+<edux-assess-header
+  kicker="Check-up · Level 1 · Chapter 1 · 20 min"
+  title="Meet Your Cutebot — Teacher page"
+  lesson-href="level1_ch1_assessment.html" lesson-label="← Back to the chapter"
+  home-href="../index.html" home-label="🏠 Level 1 Chapters"></edux-assess-header>
+
+
+
+
+<div class="aux-wrap" id="main-content">
+
+  
+
+  
+<section class="aux-section teacher-guide"><div class="aux-kicker">The lesson</div><h2 class="aux-h2">🧑‍🏫 Teacher Guide</h2>
+    <h4 class="section-label">📝 Notes for this chapter</h4><p>Batteries in before anything else. Hand out cars switched off. Fix It answer: <code>show icon</code> holds for about 0.6 s, so the class <b>does</b> see the happy face — then the sad one replaces it and stays. The bug is not that the happy face is invisible; it is that the last icon block wins. Source for this chapter: the ElecFreaks wiki pages &quot;Introduction to Cutebot&quot; and &quot;Safety Instructions&quot;.</p><h4 class="section-label">🚀 Extend — where each task goes</h4><div class="tg-ext"><span class="tg-ext__task">🟢 <b>Find every part named in this chapter on your own car, and say each name out loud to your partner.</b><br>Find the eyes and headlights at the front → Find the micro:bit on top → Turn it over for the two drive wheels → Find the battery box underneath</span><span class="tg-ext__task">🟡 <b>One safety rule is the easiest to forget. Pick it, and write one sentence on what could go wrong.</b><br>Re-read the Safety Check and the four steps in Plan → List every rule you find there → Pick the one you would forget → Say what breaks if you forget it</span><span class="tg-ext__task">🔴 <b>Find a part on the car that this chapter did not name. Work out what it might be for, then check the wiki.</b><br>Search the car for something unnamed → Guess its job from where it sits → Check the wiki page to confirm</span></div>
+    <h4 class="section-label">🧩 The blocks you need today</h4><div class="tg-grid"><div class="tg-teach"><b class="tg-block">basic_on_start</b><p class="tg-teach__plain">Everything here runs one time, the moment the micro:bit wakes up.</p><pre class="tg-teach__demo">basic.showString(&quot;HI&quot;)</pre><p class="tg-teach__shows"><b>You see:</b> The letters H and I slide across the screen once, then the screen goes dark.</p><p class="tg-teach__watch">⚠ It does <b>not</b> repeat. If a student says &quot;it only worked once&quot;, that is this block doing its job — they want <code>forever</code> instead.</p></div><div class="tg-teach"><b class="tg-block">basic_show_icon</b><p class="tg-teach__plain">Puts one of the built-in pictures on the 25 lights.</p><pre class="tg-teach__demo">basic.showIcon(IconNames.Happy)</pre><p class="tg-teach__shows"><b>You see:</b> A smiling face made of lit dots. It holds for about 0.6 seconds, then stays on screen until something else is shown.</p><p class="tg-teach__watch">⚠ This block <b>waits</b> — about 0.6 s (<code>interval</code>, default 600 ms) before the program moves on. Two icon blocks in a row are both visible; the second one then stays. To clear the screen you need <code>clear screen</code>.</p></div></div>
+</section>
+<section class="aux-section"><h2 class="aux-h2">Answer key</h2><div class="aux-card"><table class="aux-table"><tbody><tr><td>Concept</td><td>c1 → <b>A</b>, c2 → <b>A</b>, c3 → <b>A</b></td></tr><tr><td>Reading</td><td>r1 → <b>B</b>, r2 → <b>A</b>, r3 → <b>D</b>, r4 → <b>D</b></td></tr><tr><td>Debug</td><td>d1 → <b>B</b>, d2 → <b>B</b></td></tr><tr><td>Building</td><td>b1 → <b>C</b>, b2 → <b>D</b></td></tr></tbody></table></div><h3 class="aux-h3">Talk rubric</h3><p class="aux-lead">Strong — names both parts and gives each a job (micro:bit = brain holding the program, Cutebot = body with motors and sensors that carries it out). Developing — names both parts but only gives one a job. Needs Focus — repeats that they are different without saying what either one does.</p></section>
+
+</div>
+
+<p class="bref-link-wrap"><a class="btn btn--ghost bref-link" href="../../blocks.html">🧱 All the blocks we use</a></p>
+
+
+<edux-footer offline
+  variant="page"
+  logo="../../_assets/icons/favicon.svg"
+  home-href="../../index.html"
+  brand="Micro:bit with Cutebot"></edux-footer>
+
+<script src="../../_assets/js/assess-skin.js?v=1d3084f1"></script>
+
+<script>
+window.ASSESS_CFG=null;
+</script>
+<script>
+if("serviceWorker" in navigator && location.protocol.startsWith("http"))addEventListener("load",function(){navigator.serviceWorker.register("../../sw.js",{scope:"../../"}).catch(function(){});});
+</script>
+</body>
+</html>

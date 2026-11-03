@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en" data-edux-account="cb:" data-edux-login="../../progress.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Check-up · Level 1 · Chapter 2 — Move Forward or Reverse at the Full Speed — Teacher page</title>
+<link rel="preload" href="../../_assets/fonts/baloo2.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../_assets/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="description" content="Teacher Guide and check-up answer key">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://pullanslearning.github.io/CutebotTutorials/level1/assessment/level1_ch2_assessment_key">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Micro:bit with Cutebot">
+<meta property="og:title" content="Teacher page — Level 1 · Chapter 2">
+<meta property="og:description" content="Teacher Guide and check-up answer key">
+<meta property="og:url" content="https://pullanslearning.github.io/CutebotTutorials/level1/assessment/level1_ch2_assessment_key">
+<meta property="og:image" content="https://pullanslearning.github.io/CutebotTutorials/_assets/icons/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Micro:bit with Cutebot — The code stops being a picture on a screen. It becomes a car that moves.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Teacher page — Level 1 · Chapter 2">
+<meta name="twitter:description" content="Teacher Guide and check-up answer key">
+<meta name="twitter:image" content="https://pullanslearning.github.io/CutebotTutorials/_assets/icons/og.png">
+<meta name="theme-color" content="#0a5718">
+<link rel="icon" href="../../_assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../_assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="../../manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Cutebot">
+<script defer src="../../_assets/js/edux-center.js?v=a5d7326a"></script>
+<script defer src="../../_assets/js/edux-buddy.js?v=0ff6d56a" data-x="../../_assets/js/edux-buddy-extra.js?v=6fa576db" data-l="../../_assets/js/edux-buddy-lines.js?v=e0f2cd04"></script>
+<link rel="stylesheet" href="../../_assets/css/cutebot.css?v=d442594d">
+<script src="../../_assets/js/edux-chrome.js?v=b8e2b2c5"></script>
+<style>:root{ --level:#efc340; --level-deep:#735703; --level-soft:#fdeec2; --level-ink:#3d2f03; }
+body{ background:var(--color-bg); color:var(--color-ink); overflow-x:hidden; }</style>
+</head>
+<body>
+
+
+<edux-assess-header
+  kicker="Check-up · Level 1 · Chapter 2 · 20 min"
+  title="Move Forward or Reverse at the Full Speed — Teacher page"
+  lesson-href="level1_ch2_assessment.html" lesson-label="← Back to the chapter"
+  home-href="../index.html" home-label="🏠 Level 1 Chapters"></edux-assess-header>
+
+
+
+
+<div class="aux-wrap" id="main-content">
+
+  
+
+  
+<section class="aux-section teacher-guide"><div class="aux-kicker">The lesson</div><h2 class="aux-h2">🧑‍🏫 Teacher Guide</h2>
+    <h4 class="section-label">📝 Notes for this chapter</h4><p>Floor, not desk — the car does not stop on its own in this chapter. That is on purpose; the wiki&#x27;s own question at the end asks students how to stop it. Fix It answer: the drive block is in <code>on start</code>, so the car takes off the instant it is switched on. Source: ElecFreaks wiki, Case 01 &quot;Move Forward or Reverse at the Full Speed&quot;.</p><h4 class="section-label">🚀 Extend — where each task goes</h4><div class="tg-ext"><span class="tg-ext__task">🟢 <b>The wiki asks this one: how do you make the car <b>stop</b> after you press A?</b><br>Press A and watch — the car never stops on its own → Look through every block you have met so far → Decide which one could switch the motors off → If none of them can, say what you would need</span><span class="tg-ext__task">🟡 <b>Make the car drive away and come back past where it started — you may use both buttons, and you will have to switch it off to end the run.</b><br>Press A and let it run → Count out loud while it drives → Press B at the same count → Switch it off when it passes your starting line</span><span class="tg-ext__task">🔴 <b>Buttons A and B are taken. Give <b>A+B pressed</b> a job of its own, and say why that job suits a third button.</b><br>Pick a job the other two do not do → Add on button A+B pressed → Put your blocks inside → Test all three buttons</span></div>
+    <h4 class="section-label">🧩 The blocks you need today</h4><div class="tg-grid"><div class="tg-teach"><b class="tg-block">input_on_button</b><p class="tg-teach__plain">Runs the blocks inside only when someone presses that button.</p><pre class="tg-teach__demo">input.onButtonPressed(Button.A, function () {
+    basic.showIcon(IconNames.Yes)
+})</pre><p class="tg-teach__shows"><b>You see:</b> Nothing until you press A on the simulator board. Then a tick mark appears.</p><p class="tg-teach__watch">⚠ There is a third choice besides A and B: <code>A+B</code> means both at once. Students find it by accident and then cannot explain it.</p></div><div class="tg-teach"><b class="tg-block">cutebot_forward</b><p class="tg-teach__plain">Both wheels start turning forward, and they keep turning.</p><pre class="tg-teach__demo">cuteBot.forward()
+basic.pause(2000)
+cuteBot.stopcar()</pre><p class="tg-teach__shows"><b>You see:</b> The car drives straight ahead for two seconds, then stops and stays stopped.</p><p class="tg-teach__watch">⚠ This block only <b>starts</b> the wheels — it does not say how far or how long. Without a stop block the car drives until the batteries die or it hits a wall. Students who leave out the stop block think their program &#x27;crashed&#x27;.</p></div><div class="tg-teach"><b class="tg-block">cutebot_backward</b><p class="tg-teach__plain">Both wheels turn the other way, so the car reverses.</p><pre class="tg-teach__demo">cuteBot.backforward()
+basic.pause(1000)
+cuteBot.stopcar()</pre><p class="tg-teach__shows"><b>You see:</b> The car backs up for one second.</p><p class="tg-teach__watch">⚠ The function is spelled <code>backforward</code> in the editor — that is the extension&#x27;s own name, not a typo the student made.</p></div></div>
+</section>
+<section class="aux-section"><h2 class="aux-h2">Answer key</h2><div class="aux-card"><table class="aux-table"><tbody><tr><td>Concept</td><td>c1 → <b>A</b>, c2 → <b>C</b>, c3 → <b>C</b></td></tr><tr><td>Reading</td><td>r1 → <b>B</b>, r2 → <b>C</b>, r3 → <b>B</b>, r4 → <b>C</b></td></tr><tr><td>Debug</td><td>d1 → <b>D</b>, d2 → <b>C</b></td></tr><tr><td>Building</td><td>b1 → <b>D</b>, b2 → <b>B</b></td></tr></tbody></table></div><h3 class="aux-h3">Talk rubric</h3><p class="aux-lead">Strong — says to drive on the floor and names the reason (nothing in this program stops the motors, so the car keeps going). Developing — says to use the floor without saying why the car does not stop. Needs Focus — blames the car or the code being broken.</p></section>
+
+</div>
+
+<p class="bref-link-wrap"><a class="btn btn--ghost bref-link" href="../../blocks.html">🧱 All the blocks we use</a></p>
+
+
+<edux-footer offline
+  variant="page"
+  logo="../../_assets/icons/favicon.svg"
+  home-href="../../index.html"
+  brand="Micro:bit with Cutebot"></edux-footer>
+
+<script src="../../_assets/js/assess-skin.js?v=1d3084f1"></script>
+
+<script>
+window.ASSESS_CFG=null;
+</script>
+<script>
+if("serviceWorker" in navigator && location.protocol.startsWith("http"))addEventListener("load",function(){navigator.serviceWorker.register("../../sw.js",{scope:"../../"}).catch(function(){});});
+</script>
+</body>
+</html>

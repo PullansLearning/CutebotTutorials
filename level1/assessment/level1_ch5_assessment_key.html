@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en" data-edux-account="cb:" data-edux-login="../../progress.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Check-up · Level 1 · Chapter 5 — Run at Random — Teacher page</title>
+<link rel="preload" href="../../_assets/fonts/baloo2.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../_assets/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="description" content="Teacher Guide and check-up answer key">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://pullanslearning.github.io/CutebotTutorials/level1/assessment/level1_ch5_assessment_key">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Micro:bit with Cutebot">
+<meta property="og:title" content="Teacher page — Level 1 · Chapter 5">
+<meta property="og:description" content="Teacher Guide and check-up answer key">
+<meta property="og:url" content="https://pullanslearning.github.io/CutebotTutorials/level1/assessment/level1_ch5_assessment_key">
+<meta property="og:image" content="https://pullanslearning.github.io/CutebotTutorials/_assets/icons/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Micro:bit with Cutebot — The code stops being a picture on a screen. It becomes a car that moves.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Teacher page — Level 1 · Chapter 5">
+<meta name="twitter:description" content="Teacher Guide and check-up answer key">
+<meta name="twitter:image" content="https://pullanslearning.github.io/CutebotTutorials/_assets/icons/og.png">
+<meta name="theme-color" content="#0a5718">
+<link rel="icon" href="../../_assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../_assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="../../manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Cutebot">
+<script defer src="../../_assets/js/edux-center.js?v=a5d7326a"></script>
+<script defer src="../../_assets/js/edux-buddy.js?v=0ff6d56a" data-x="../../_assets/js/edux-buddy-extra.js?v=6fa576db" data-l="../../_assets/js/edux-buddy-lines.js?v=e0f2cd04"></script>
+<link rel="stylesheet" href="../../_assets/css/cutebot.css?v=d442594d">
+<script src="../../_assets/js/edux-chrome.js?v=b8e2b2c5"></script>
+<style>:root{ --level:#efc340; --level-deep:#735703; --level-soft:#fdeec2; --level-ink:#3d2f03; }
+body{ background:var(--color-bg); color:var(--color-ink); overflow-x:hidden; }</style>
+</head>
+<body>
+
+
+<edux-assess-header
+  kicker="Check-up · Level 1 · Chapter 5 · 20 min"
+  title="Run at Random — Teacher page"
+  lesson-href="level1_ch5_assessment.html" lesson-label="← Back to the chapter"
+  home-href="../index.html" home-label="🏠 Level 1 Chapters"></edux-assess-header>
+
+
+
+
+<div class="aux-wrap" id="main-content">
+
+  
+
+  
+<section class="aux-section teacher-guide"><div class="aux-kicker">The lesson</div><h2 class="aux-h2">🧑‍🏫 Teacher Guide</h2>
+    <h4 class="section-label">📝 Notes for this chapter</h4><p>Floor, and be ready to catch it — this car reverses without warning. The wiki program holds each random pair for one second (<code>pause 1000</code>). Without that pause the speeds change about 50 times a second and the car only shivers. Fix It answer: the range starts at 0, so the wheels can never run backwards and the car only ever curves forwards. Source: ElecFreaks wiki, Case 04 &quot;Run at Random&quot;.</p><h4 class="section-label">🚀 Extend — where each task goes</h4><div class="tg-ext"><span class="tg-ext__task">🟡 <b>Keep the wandering, but stop it from ever driving backward.</b><br>Find the two numbers that set the range → Decide which one lets it reverse → Change only that one → Watch a full minute to be sure</span><span class="tg-ext__task">🟡 <b>Make it wander for ten seconds and then stop by itself.</b><br>Find a way to count the time → Decide where the counting goes → Choose the block that stops the wheels → Test with a stopwatch</span><span class="tg-ext__task">🔴 <b>Make the car wander but stay inside a chalk circle on the floor.</b><br>Work out what the car would need to sense → Check which sensor you have met so far → If none fits, say what you would need and why</span></div>
+    <h4 class="section-label">🧩 The blocks you need today</h4><div class="tg-grid"><div class="tg-teach"><b class="tg-block">math_random_range</b><p class="tg-teach__plain">Picks a random whole number between two numbers.</p><pre class="tg-teach__demo">cuteBot.motors(randint(30, 100), randint(30, 100))
+basic.pause(1000)
+cuteBot.stopcar()</pre><p class="tg-teach__shows"><b>You see:</b> The car drives off at a different speed and curve most times you run it.</p></div></div>
+</section>
+<section class="aux-section"><h2 class="aux-h2">Answer key</h2><div class="aux-card"><table class="aux-table"><tbody><tr><td>Concept</td><td>c1 → <b>B</b>, c2 → <b>B</b>, c3 → <b>A</b></td></tr><tr><td>Reading</td><td>r1 → <b>D</b>, r2 → <b>D</b>, r3 → <b>B</b>, r4 → <b>D</b></td></tr><tr><td>Debug</td><td>d1 → <b>B</b>, d2 → <b>B</b></td></tr><tr><td>Building</td><td>b1 → <b>B</b>, b2 → <b>B</b></td></tr></tbody></table></div><h3 class="aux-h3">Talk rubric</h3><p class="aux-lead">Strong — says the car is doing exactly what the program says, and that unpredictability was chosen on purpose by using the random block. Developing — says it is not broken but does not point to the random block as the deliberate cause. Needs Focus — agrees that it is broken, or says the micro:bit changes the program.</p></section>
+
+</div>
+
+<p class="bref-link-wrap"><a class="btn btn--ghost bref-link" href="../../blocks.html">🧱 All the blocks we use</a></p>
+
+
+<edux-footer offline
+  variant="page"
+  logo="../../_assets/icons/favicon.svg"
+  home-href="../../index.html"
+  brand="Micro:bit with Cutebot"></edux-footer>
+
+<script src="../../_assets/js/assess-skin.js?v=1d3084f1"></script>
+
+<script>
+window.ASSESS_CFG=null;
+</script>
+<script>
+if("serviceWorker" in navigator && location.protocol.startsWith("http"))addEventListener("load",function(){navigator.serviceWorker.register("../../sw.js",{scope:"../../"}).catch(function(){});});
+</script>
+</body>
+</html>

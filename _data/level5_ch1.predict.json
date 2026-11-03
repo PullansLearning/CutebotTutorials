@@ -1,0 +1,1 @@
+{"asks": {"p1": {"correct": "C", "why": "The group is a channel. A board only receives messages sent on its own group, so the number never arrives and `on radio received` never runs. Both boards must agree on the group first."}}}

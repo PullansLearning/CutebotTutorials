@@ -1,0 +1,1 @@
+{"asks": {"p1": {"correct": "B", "why": "7 is not under 5, so the first branch is skipped. It is under 10, so the `else if` runs — both wheels set to 0. Inside the band the car holds still on purpose."}}}

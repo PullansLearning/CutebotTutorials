@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en" data-edux-account="cb:" data-edux-login="../../progress.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Check-up · Level 4 · Chapter 2 — Car Following with a Fixed Distance — Teacher page</title>
+<link rel="preload" href="../../_assets/fonts/baloo2.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../_assets/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="description" content="Teacher Guide and check-up answer key">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://pullanslearning.github.io/CutebotTutorials/level4/assessment/level4_ch2_assessment_key">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Micro:bit with Cutebot">
+<meta property="og:title" content="Teacher page — Level 4 · Chapter 2">
+<meta property="og:description" content="Teacher Guide and check-up answer key">
+<meta property="og:url" content="https://pullanslearning.github.io/CutebotTutorials/level4/assessment/level4_ch2_assessment_key">
+<meta property="og:image" content="https://pullanslearning.github.io/CutebotTutorials/_assets/icons/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Micro:bit with Cutebot — The code stops being a picture on a screen. It becomes a car that moves.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Teacher page — Level 4 · Chapter 2">
+<meta name="twitter:description" content="Teacher Guide and check-up answer key">
+<meta name="twitter:image" content="https://pullanslearning.github.io/CutebotTutorials/_assets/icons/og.png">
+<meta name="theme-color" content="#0a5718">
+<link rel="icon" href="../../_assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../_assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="../../manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Cutebot">
+<script defer src="../../_assets/js/edux-center.js?v=a5d7326a"></script>
+<script defer src="../../_assets/js/edux-buddy.js?v=0ff6d56a" data-x="../../_assets/js/edux-buddy-extra.js?v=6fa576db" data-l="../../_assets/js/edux-buddy-lines.js?v=e0f2cd04"></script>
+<link rel="stylesheet" href="../../_assets/css/cutebot.css?v=d442594d">
+<script src="../../_assets/js/edux-chrome.js?v=b8e2b2c5"></script>
+<style>:root{ --level:#91ace3; --level-deep:#1c54c3; --level-soft:#e9effb; --level-ink:#152e62; }
+body{ background:var(--color-bg); color:var(--color-ink); overflow-x:hidden; }</style>
+</head>
+<body>
+
+
+<edux-assess-header
+  kicker="Check-up · Level 4 · Chapter 2 · 20 min"
+  title="Car Following with a Fixed Distance — Teacher page"
+  lesson-href="level4_ch2_assessment.html" lesson-label="← Back to the chapter"
+  home-href="../index.html" home-label="🏠 Level 4 Chapters"></edux-assess-header>
+
+
+
+
+<div class="aux-wrap" id="main-content">
+
+  
+
+  
+<section class="aux-section teacher-guide"><div class="aux-kicker">The lesson</div><h2 class="aux-h2">🧑‍🏫 Teacher Guide</h2>
+    <h4 class="section-label">📝 Notes for this chapter</h4><p>The three-branch shape (<code>if / else if / else</code>) is the real content. Draw a number line on the board: under 5, 5 up to 9, 10 and over. Fix It answer: two things are wrong. The wide test comes first, so the narrow one never runs — anything under 5 is already under 10. And the forward block sits in the <code>&lt; 10</code> branch, so the car drives into your hand. Put <code>&lt; 5</code> first, and make <code>&lt; 10</code> stop. The 2 cm floor from last chapter is gone on purpose: a 0 reading now lands in too close, and backing off is the safe answer. Source: ElecFreaks wiki, Case 10 &quot;Car Following with A Fixed Distance&quot;.</p><h4 class="section-label">🚀 Extend — where each task goes</h4><div class="tg-ext"><span class="tg-ext__task">🟢 <b>Make the gap 20 cm instead. Say which numbers you had to change.</b><br>Find the two numbers that set the band → Decide the new pair → Change both → Test that the car still settles</span><span class="tg-ext__task">🟡 <b>Add a headlight color for each state: too close, just right, too far.</b><br>Recall the headlight block from Level 2 → Pick three colors → Put one in each branch → Check the color changes as you move your hand</span><span class="tg-ext__task">🔴 <b>Make the car speed up the further away your hand is, instead of one fixed speed.</b><br>Notice the forward speed is a fixed 30 → Work out how the gap could set that number → Try it → Say what happens when your hand is very far away</span></div>
+    <h4 class="section-label">🧩 The blocks you need today</h4><div class="tg-grid"><div class="tg-teach"><b class="tg-block">logic_else_if</b><p class="tg-teach__plain">Adds another test for when the one above it was false.</p><pre class="tg-teach__demo">if (input.buttonIsPressed(Button.A)) {
+    cuteBot.forward()
+} else if (input.buttonIsPressed(Button.B)) {
+    cuteBot.backforward()
+} else {
+    cuteBot.stopcar()
+}</pre><p class="tg-teach__shows"><b>You see:</b> The first test that is true wins and the rest are skipped.</p></div></div>
+</section>
+<section class="aux-section"><h2 class="aux-h2">Answer key</h2><div class="aux-card"><table class="aux-table"><tbody><tr><td>Concept</td><td>c1 → <b>B</b>, c2 → <b>A</b>, c3 → <b>C</b></td></tr><tr><td>Reading</td><td>r1 → <b>B</b>, r2 → <b>A</b>, r3 → <b>B</b>, r4 → <b>D</b></td></tr><tr><td>Debug</td><td>d1 → <b>A</b>, d2 → <b>A</b></td></tr><tr><td>Building</td><td>b1 → <b>A</b>, b2 → <b>B</b></td></tr></tbody></table></div><h3 class="aux-h3">Talk rubric</h3><p class="aux-lead">Strong — says a chain stops at the first true test so exactly one branch runs, whereas separate <code>if</code> blocks are all checked and a later one can overwrite an earlier decision. Developing — says only one branch runs in a chain, without saying what goes wrong otherwise. Needs Focus — treats the two forms as equivalent.</p></section>
+
+</div>
+
+<p class="bref-link-wrap"><a class="btn btn--ghost bref-link" href="../../blocks.html">🧱 All the blocks we use</a></p>
+
+
+<edux-footer offline
+  variant="page"
+  logo="../../_assets/icons/favicon.svg"
+  home-href="../../index.html"
+  brand="Micro:bit with Cutebot"></edux-footer>
+
+<script src="../../_assets/js/assess-skin.js?v=1d3084f1"></script>
+
+<script>
+window.ASSESS_CFG=null;
+</script>
+<script>
+if("serviceWorker" in navigator && location.protocol.startsWith("http"))addEventListener("load",function(){navigator.serviceWorker.register("../../sw.js",{scope:"../../"}).catch(function(){});});
+</script>
+</body>
+</html>

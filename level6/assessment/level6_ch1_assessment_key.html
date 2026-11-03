@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en" data-edux-account="cb:" data-edux-login="../../progress.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Check-up · Level 6 · Chapter 1 — Seeking the Light — Teacher page</title>
+<link rel="preload" href="../../_assets/fonts/baloo2.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../_assets/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="description" content="Teacher Guide and check-up answer key">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://pullanslearning.github.io/CutebotTutorials/level6/assessment/level6_ch1_assessment_key">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Micro:bit with Cutebot">
+<meta property="og:title" content="Teacher page — Level 6 · Chapter 1">
+<meta property="og:description" content="Teacher Guide and check-up answer key">
+<meta property="og:url" content="https://pullanslearning.github.io/CutebotTutorials/level6/assessment/level6_ch1_assessment_key">
+<meta property="og:image" content="https://pullanslearning.github.io/CutebotTutorials/_assets/icons/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Micro:bit with Cutebot — The code stops being a picture on a screen. It becomes a car that moves.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Teacher page — Level 6 · Chapter 1">
+<meta name="twitter:description" content="Teacher Guide and check-up answer key">
+<meta name="twitter:image" content="https://pullanslearning.github.io/CutebotTutorials/_assets/icons/og.png">
+<meta name="theme-color" content="#0a5718">
+<link rel="icon" href="../../_assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../_assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="../../manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Cutebot">
+<script defer src="../../_assets/js/edux-center.js?v=a5d7326a"></script>
+<script defer src="../../_assets/js/edux-buddy.js?v=0ff6d56a" data-x="../../_assets/js/edux-buddy-extra.js?v=6fa576db" data-l="../../_assets/js/edux-buddy-lines.js?v=e0f2cd04"></script>
+<link rel="stylesheet" href="../../_assets/css/cutebot.css?v=d442594d">
+<script src="../../_assets/js/edux-chrome.js?v=b8e2b2c5"></script>
+<style>:root{ --level:#d47ea9; --level-deep:#a82466; --level-soft:#faeaf2; --level-ink:#571938; }
+body{ background:var(--color-bg); color:var(--color-ink); overflow-x:hidden; }</style>
+</head>
+<body>
+
+
+<edux-assess-header
+  kicker="Check-up · Level 6 · Chapter 1 · 20 min"
+  title="Seeking the Light — Teacher page"
+  lesson-href="level6_ch1_assessment.html" lesson-label="← Back to the chapter"
+  home-href="../index.html" home-label="🏠 Level 6 Chapters"></edux-assess-header>
+
+
+
+
+<div class="aux-wrap" id="main-content">
+
+  
+
+  
+<section class="aux-section teacher-guide"><div class="aux-kicker">The lesson</div><h2 class="aux-h2">🧑‍🏫 Teacher Guide</h2>
+    <h4 class="section-label">📝 Notes for this chapter</h4><p>Darken the room as much as you can and use a torch. The wiki program uses 50 — that is <b>their</b> room, and it is a starting point, not an answer. Pairs measure their own exactly as in Level 2. That is the point of ending here: the same skill, now on a number that decides whether the robot works at all. Fix It answer: the branches are swapped, so the car drives away in the dark and spins when it finds the light. Source: ElecFreaks wiki, Case 15 &quot;Seeking the Light&quot;.</p><h4 class="section-label">🚀 Extend — where each task goes</h4><div class="tg-ext"><span class="tg-ext__task">🟢 <b>Run it against a partner&#x27;s car and see whose finds the torch first.</b><br>Agree a starting line and a torch position → Run both cars → Note which threshold each pair used → Say why one was faster</span><span class="tg-ext__task">🟡 <b>Make it stop when it gets close to the light instead of bumping it.</b><br>Watch how high the light level climbs as the torch gets close → Pick a number that means close enough → Add that test to the bright branch → Test with the torch on the floor</span><span class="tg-ext__task">🔴 <b>Free build: pick any two sensors you have met and make the car do something new.</b><br>List the sensors from all six levels → Pick two that could work together → Write down what the car should do → Build it and show the class</span></div>
+    <h4 class="section-label">🧩 The blocks you need today</h4><div class="tg-grid"><div class="tg-teach"><b class="tg-block">input_light_level</b><p class="tg-teach__plain">Reads how bright the room is, from 0 to 255.</p><pre class="tg-teach__demo">basic.showNumber(input.lightLevel())</pre><p class="tg-teach__shows"><b>You see:</b> A small number in the dark and a big number in the light.</p></div><div class="tg-teach"><b class="tg-block">logic_if_else</b><p class="tg-teach__plain">Picks one of two paths, one for true and one for false.</p><pre class="tg-teach__demo">if (cuteBot.ultrasonic(cuteBot.SonarUnit.Centimeters) &lt; 15) {
+    cuteBot.stopcar()
+} else {
+    cuteBot.forward()
+}</pre><p class="tg-teach__shows"><b>You see:</b> Exactly one of the two groups runs, never both.</p></div><div class="tg-teach"><b class="tg-block">basic_forever</b><p class="tg-teach__plain">Everything inside runs again and again, without stopping.</p><pre class="tg-teach__demo">basic.forever(function () {
+    basic.showIcon(IconNames.Heart)
+    basic.pause(500)
+    basic.clearScreen()
+    basic.pause(500)
+})</pre><p class="tg-teach__shows"><b>You see:</b> A heart that blinks on and off, about once a second, and never stops.</p><p class="tg-teach__watch">⚠ A <code>forever</code> with no <code>pause</code> repeats very fast. That is fine for motors (a speed ramp needs it), but a blink needs a pause to be seen.</p></div><div class="tg-teach"><b class="tg-block">cutebot_forward</b><p class="tg-teach__plain">Both wheels start turning forward, and they keep turning.</p><pre class="tg-teach__demo">cuteBot.forward()
+basic.pause(2000)
+cuteBot.stopcar()</pre><p class="tg-teach__shows"><b>You see:</b> The car drives straight ahead for two seconds, then stops and stays stopped.</p><p class="tg-teach__watch">⚠ This block only <b>starts</b> the wheels — it does not say how far or how long. Without a stop block the car drives until the batteries die or it hits a wall. Students who leave out the stop block think their program &#x27;crashed&#x27;.</p></div><div class="tg-teach"><b class="tg-block">logic_compare</b><p class="tg-teach__plain">Compares two numbers.</p><pre class="tg-teach__demo">if (cuteBot.ultrasonic(cuteBot.SonarUnit.Centimeters) &lt; 20) {
+    cuteBot.stopcar()
+}</pre><p class="tg-teach__shows"><b>You see:</b> True or false, which you drop into an if block.</p></div><div class="tg-teach"><b class="tg-block">cutebot_turn_left</b><p class="tg-teach__plain">One wheel stops and the other drives, so the car pivots to the left.</p><pre class="tg-teach__demo">cuteBot.turnleft()
+basic.pause(500)
+cuteBot.stopcar()</pre><p class="tg-teach__shows"><b>You see:</b> The car pivots left. Half a second is roughly a quarter turn on a smooth floor.</p><p class="tg-teach__watch">⚠ How far it turns depends on the floor and the batteries. On carpet the same half second turns much less. Students should measure, not trust a number.</p></div></div>
+</section>
+<section class="aux-section"><h2 class="aux-h2">Answer key</h2><div class="aux-card"><table class="aux-table"><tbody><tr><td>Concept</td><td>c1 → <b>C</b>, c2 → <b>C</b>, c3 → <b>D</b></td></tr><tr><td>Reading</td><td>r1 → <b>C</b>, r2 → <b>C</b>, r3 → <b>C</b>, r4 → <b>A</b></td></tr><tr><td>Debug</td><td>d1 → <b>B</b>, d2 → <b>B</b></td></tr><tr><td>Building</td><td>b1 → <b>B</b>, b2 → <b>A</b></td></tr></tbody></table></div><h3 class="aux-h3">Talk rubric</h3><p class="aux-lead">Strong — says the sensor gives only a brightness number with no direction in it, and the car finds a direction by turning until the reading rises past the threshold. Developing — says it does not know the direction without explaining how spinning solves that. Needs Focus — agrees that the car knows where the light is, or says it needs a second sensor.</p></section>
+
+</div>
+
+<p class="bref-link-wrap"><a class="btn btn--ghost bref-link" href="../../blocks.html">🧱 All the blocks we use</a></p>
+
+
+<edux-footer offline
+  variant="page"
+  logo="../../_assets/icons/favicon.svg"
+  home-href="../../index.html"
+  brand="Micro:bit with Cutebot"></edux-footer>
+
+<script src="../../_assets/js/assess-skin.js?v=1d3084f1"></script>
+
+<script>
+window.ASSESS_CFG=null;
+</script>
+<script>
+if("serviceWorker" in navigator && location.protocol.startsWith("http"))addEventListener("load",function(){navigator.serviceWorker.register("../../sw.js",{scope:"../../"}).catch(function(){});});
+</script>
+</body>
+</html>

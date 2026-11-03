@@ -1,0 +1,1 @@
+{"asks": {"p1": {"correct": "B", "why": "Blocks in `on start` run once, the moment the program begins. This program only draws a face, so that is all that happens. Nothing here tells the motors to turn."}}}

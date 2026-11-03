@@ -1,0 +1,1 @@
+{"asks": {"p1": {"correct": "B", "why": "In the middle of the table both probes see the surface, so the test is true and the first branch runs — both wheels at 20, creeping forward. The reverse is the `else`, saved for the moment the surface disappears."}}}

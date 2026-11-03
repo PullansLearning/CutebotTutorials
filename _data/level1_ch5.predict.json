@@ -1,0 +1,1 @@
+{"asks": {"p1": {"correct": "C", "why": "`pick random -100 to 100` chooses a fresh number every time it runs. The range is fixed by you; the choice inside that range is not."}}}

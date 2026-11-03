@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" data-edux-account="cb:" data-edux-login="progress.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Teacher Guide — Micro:bit with Cutebot</title>
+<link rel="preload" href="_assets/fonts/baloo2.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="_assets/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="description" content="How to teach Micro:bit with Cutebot: what to have on the desk, the seven beats of a chapter, what each level opens up, the problems that look like bugs, and how check-ups and progress work.">
+<link rel="canonical" href="https://pullanslearning.github.io/CutebotTutorials/teacher-guide">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Micro:bit with Cutebot">
+<meta property="og:title" content="Teacher Guide — Micro:bit with Cutebot">
+<meta property="og:description" content="How to teach Micro:bit with Cutebot: what to have on the desk, the seven beats of a chapter, what each level opens up, the problems that look like bugs, and how check-ups and progress work.">
+<meta property="og:url" content="https://pullanslearning.github.io/CutebotTutorials/teacher-guide">
+<meta property="og:image" content="https://pullanslearning.github.io/CutebotTutorials/_assets/icons/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Micro:bit with Cutebot — The code stops being a picture on a screen. It becomes a car that moves.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Teacher Guide — Micro:bit with Cutebot">
+<meta name="twitter:description" content="How to teach Micro:bit with Cutebot: what to have on the desk, the seven beats of a chapter, what each level opens up, the problems that look like bugs, and how check-ups and progress work.">
+<meta name="twitter:image" content="https://pullanslearning.github.io/CutebotTutorials/_assets/icons/og.png">
+<meta name="theme-color" content="#0a5718">
+<link rel="icon" href="_assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="_assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Cutebot">
+<script defer src="_assets/js/edux-center.js?v=a5d7326a"></script>
+<script defer src="_assets/js/edux-buddy.js?v=0ff6d56a" data-x="_assets/js/edux-buddy-extra.js?v=6fa576db" data-l="_assets/js/edux-buddy-lines.js?v=e0f2cd04"></script>
+<link rel="stylesheet" href="_assets/css/cutebot.css?v=d442594d">
+<script src="_assets/js/edux-chrome.js?v=b8e2b2c5"></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<edux-hero variant="gradient"
+  brand="MICRO:BIT WITH CUTEBOT" logo="_assets/icons/favicon.svg"
+  toplink="← Back to home" toplink-href="index.html"
+  kicker="For teachers" title="Teacher Guide" sub="What to have on the desk, how a chapter runs, and the three problems that look like bugs and are not."></edux-hero>
+<main id="main-content">
+  <div class="aux-wrap aux-intro">
+    <section class="aux-section">
+      <div class="aux-kicker">Read this first</div>
+      <h2 class="aux-h2">The robot is the course</h2>
+      <p class="aux-lead">Students already know how to snap blocks together. What is new
+        here is that the program leaves the screen: it becomes a car on the floor that
+        drives, signals, measures and obeys. There are <strong>15 chapters</strong>
+        across 6 levels, each about <strong>45 minutes</strong> long,
+        for grades 6–9 once they know micro:bit blocks.</p>
+      <p class="aux-lead">There is no screen-only path. The MakeCode simulator does not
+        model the Cutebot &mdash; not the motors, not the sonar, not the floor probes
+        &mdash; so <strong>every chapter needs a real car</strong>. Plan the lesson around
+        having the hardware in the room, not around having it later.</p>
+      <div class="aux-chips">
+        <span class="aux-chip">MakeCode blocks</span>
+        <span class="aux-chip">Real hardware, every chapter</span>
+        <span class="aux-chip">English is the label, the picture teaches</span>
+        <span class="aux-chip aux-chip--soft">No account, works offline</span>
+      </div>
+    </section>
+
+    <section class="aux-section">
+      <div class="aux-kicker">Before the lesson</div>
+      <h2 class="aux-h2">What you need on the desk</h2>
+      <p class="aux-lead">Everything below comes from the course's own declaration, so
+        this list cannot drift away from what the chapters actually ask for. Add the two
+        MakeCode extensions once per project &mdash; the chapters tell students when.</p>
+      <div class="aux-card">
+        <table class="aux-table">
+          <thead><tr><th>Item</th><th>What exactly</th></tr></thead>
+          <tbody>
+          <tr><td class="key">Robot</td><td>ElecFreaks Cutebot (micro:bit smart car)</td></tr>
+          <tr><td class="key">Controller</td><td>BBC micro:bit V2</td></tr>
+          <tr><td class="key">Power</td><td>3 × AAA batteries (3.5–5V)</td></tr>
+          <tr><td class="key">Cable</td><td>Micro USB cable</td></tr>
+          <tr><td class="key">Extension</td><td>cutebot  (github:elecfreaks/pxt-cutebot)</td></tr>
+          <tr><td class="key">Extension</td><td>neopixel  (github:microsoft/pxt-neopixel)</td></tr>
+          <tr><td class="key">To prepare</td><td>A line-following track — printed, or black electrical tape on the floor</td></tr>
+          <tr><td class="key">To prepare</td><td>A few boxes or books to use as obstacles</td></tr>
+          <tr><td class="key">Sharing</td><td>One car per student is not assumed — two or three learners to a car works, and giving each of them a job (driver, coder, tester) works better than taking turns.</td></tr>
+        </tbody>
+        </table>
+      </div>
+      <p class="aux-lead">Programs are written at
+        <a href="https://makecode.microbit.org/">https://makecode.microbit.org/</a> and
+        copied onto the micro:bit over USB. The cable only carries the program; the
+        batteries do the driving.</p>
+    </section>
+
+    <section class="aux-section">
+      <div class="aux-kicker">You do not have to be a coder</div>
+      <h2 class="aux-h2">The help is one page per chapter, not a manual</h2>
+      <p class="aux-lead">Every chapter has a <strong>teacher page</strong>: the Teacher
+        Notes (what to prepare, the misconception students arrive with, and the answer to
+        that chapter's Fix It), the blocks of the day in plain words, and the check-up
+        answer key. The pages are listed on the <a href="teacher.html">Admin page</a>
+        &mdash; they are never linked from a student page.</p>
+      <p class="aux-lead">If you want to see which blocks the course uses before you
+        start, <a href="blocks.html">the block reference</a> lists every one of them with
+        the picture students will see in the editor.</p>
+    </section>
+
+    <section class="aux-section">
+      <div class="aux-kicker">The rhythm</div>
+      <h2 class="aux-h2">Every chapter runs in the same seven beats</h2>
+      <p class="aux-lead">Learn the rhythm once and you can teach any of the 15
+        chapters. Each beat has a job, and together they move a pair from watching to
+        predicting to building to debugging.</p>
+      <div class="aux-beats">
+      <div class="aux-beat">
+        <div class="aux-beat__head"><span class="aux-beat__ico">🔥</span><span class="aux-beat__n">1</span><h3 class="aux-h3">Warm-Up</h3></div>
+        <p class="aux-beat__what">The hook says what changes today, then one line about where this lives outside the classroom. The vocabulary for the chapter is rendered as cards, and every word carries an emoji.</p>
+        <div class="aux-beat__tip"><b>Your move:</b> Point at the emoji before you say the word. Most of your learners are reading English as a second or third language.</div>
+      </div>
+      <div class="aux-beat">
+        <div class="aux-beat__head"><span class="aux-beat__ico">🤔</span><span class="aux-beat__n">2</span><h3 class="aux-h3">Predict</h3></div>
+        <p class="aux-beat__what">Students read one program and choose, from three options, what the car will do. The answer and the reason are on the page.</p>
+        <div class="aux-beat__tip"><b>Your move:</b> This course has no simulator, so this is the only place students run a program in their heads. Take a whole-class vote before you reveal.</div>
+      </div>
+      <div class="aux-beat">
+        <div class="aux-beat__head"><span class="aux-beat__ico">🙌</span><span class="aux-beat__n">3</span><h3 class="aux-h3">Try It</h3></div>
+        <p class="aux-beat__what">Three or four short programs to download and run. Each one names a number to change, and the expected result is shown so nobody is stuck guessing.</p>
+        <div class="aux-beat__tip"><b>Your move:</b> Insist they change the number and download again. Cause and effect is the whole point here, not finishing first.</div>
+      </div>
+      <div class="aux-beat">
+        <div class="aux-beat__head"><span class="aux-beat__ico">🗺️</span><span class="aux-beat__n">4</span><h3 class="aux-h3">Plan</h3></div>
+        <p class="aux-beat__what">One paragraph saying what is being built, then three to five mission cards that split it up. From Level 4 on, a flowchart is added when the program has to make a choice.</p>
+        <div class="aux-beat__tip"><b>Your move:</b> Do not let them open the editor until a pair can say the plan out loud. The cards are a briefing, not code.</div>
+      </div>
+      <div class="aux-beat">
+        <div class="aux-beat__head"><span class="aux-beat__ico">🔨</span><span class="aux-beat__n">5</span><h3 class="aux-h3">Build</h3></div>
+        <p class="aux-beat__what">Numbered steps. Each step shows only the blocks it adds, so what is new stays visible, and the finished program comes last. Every chapter ends with a Drive Test on the floor.</p>
+        <div class="aux-beat__tip"><b>Your move:</b> Clear floor space before this section. The Drive Test is the result of the chapter — if you run out of time, cut something else.</div>
+      </div>
+      <div class="aux-beat">
+        <div class="aux-beat__head"><span class="aux-beat__ico">🔧</span><span class="aux-beat__n">6</span><h3 class="aux-h3">Fix It</h3></div>
+        <p class="aux-beat__what">A broken program beside the working one. The bug always changes what the car does; ugly-but-correct code is never the bug.</p>
+        <div class="aux-beat__tip"><b>Your move:</b> Ask what is different instead of pointing at it. The answer is in the Teacher Note on that chapter&#x27;s page.</div>
+      </div>
+      <div class="aux-beat">
+        <div class="aux-beat__head"><span class="aux-beat__ico">🚀</span><span class="aux-beat__n">7</span><h3 class="aux-h3">Extend</h3></div>
+        <p class="aux-beat__what">Three tiers of extra projects. They give a goal, a flowchart and a picture of the result — never the finished code.</p>
+        <div class="aux-beat__tip"><b>Your move:</b> The plan for each task is in this chapter&#x27;s teacher block, not on the student page. Send fast finishers to a red task rather than to the door.</div>
+      </div>
+      </div>
+    </section>
+
+    <section class="aux-section">
+      <div class="aux-kicker">The course at a glance</div>
+      <h2 class="aux-h2">6 levels, and what each one switches on</h2>
+      <p class="aux-lead">Teach the levels in order: every chapter reuses blocks from
+        earlier ones on purpose, and most levels switch on a part of the car that has not
+        been used yet. The last level opens nothing new &mdash; it asks for a behavior
+        built out of what is already there.</p>
+      <div class="aux-card">
+        <table class="aux-table">
+          <thead><tr><th>Level</th><th>Grade</th><th>What it is about</th><th>Chapters</th><th>Wiki cases</th><th>New hardware it opens</th></tr></thead>
+          <tbody>
+          <tr><td class="key">1 · Driver</td><td>Grades 6–9</td><td>Two motors, one idea — turning is a difference in speed</td><td>5</td><td>Intro + Case 01–04</td><td>Battery box (3 × AAA) · Two rear-drive gear motors · Two RGB headlights</td></tr>
+          <tr><td class="key">2 · Signaler</td><td>Grades 6–9</td><td>The car says what it is doing — in light</td><td>2</td><td>Case 05–06</td><td>Light sensor · Two rainbow clearance lamps</td></tr>
+          <tr><td class="key">3 · Guard</td><td>Grades 6–9</td><td>It reads the floor, so it never falls off</td><td>2</td><td>Case 07–08</td><td>Two line-tracking probes</td></tr>
+          <tr><td class="key">4 · Scout</td><td>Grades 6–9</td><td>It measures the distance, then decides</td><td>2</td><td>Case 09–10</td><td>Ultrasonic distance sensor</td></tr>
+          <tr><td class="key">5 · Commander</td><td>Grades 6–9</td><td>Two boards, one agreement</td><td>3</td><td>Case 11 · Case 12 · Case 14</td><td>Radio · Accelerometer · Infrared receiver</td></tr>
+          <tr><td class="key">6 · Seeker</td><td>Grades 6–9</td><td>It hunts for light on its own</td><td>1</td><td>Case 15</td><td>&mdash;</td></tr>
+        </tbody>
+        </table>
+      </div>
+      <p class="aux-lead">The standards each level carries are set out on the
+        <a href="alignment.html">alignment page</a>.</p>
+    </section>
+
+    <section class="aux-section">
+      <div class="aux-kicker">In the room</div>
+      <h2 class="aux-h2">Three things that look like a bug and are not</h2>
+      <div class="aux-beats">
+      <div class="aux-beat">
+        <div class="aux-beat__head"><span class="aux-beat__ico">🔋</span><h3 class="aux-h3">Weak batteries look exactly like wrong code</h3></div>
+        <p class="aux-beat__what">A tired set of AA cells makes the car crawl, pull to one side, or do nothing at all — the same symptoms as a bug. Change the batteries before you debug the program. Keep a charged spare set on the desk.</p>
+      </div>
+      <div class="aux-beat">
+        <div class="aux-beat__head"><span class="aux-beat__ico">💡</span><h3 class="aux-h3">A light threshold is a number for your room</h3></div>
+        <p class="aux-beat__what">Two chapters ask the car to react to brightness. The number that counts as dark depends on the lamps and windows in the room you are teaching in, so the lesson has students read the sensor first and choose their own. A number copied from another room will not work.</p>
+      </div>
+      <div class="aux-beat">
+        <div class="aux-beat__head"><span class="aux-beat__ico">🛟</span><h3 class="aux-h3">The robot moves, so the desk is a cliff</h3></div>
+        <p class="aux-beat__what">Cars drive off table edges and into feet. Work on the floor or on a taped-off area, know where the power switch is, and have students say what the car is about to do before they start it.</p>
+      </div>
+      </div>
+    </section>
+
+    <section class="aux-section">
+      <div class="aux-kicker">Where the code comes from</div>
+      <h2 class="aux-h2">One chapter is one page of the ElecFreaks wiki</h2>
+      <p class="aux-lead">The lesson programs are not ours. They come from the
+        <a href="https://wiki.elecfreaks.com/en/microbit/microbit-smart-car/microbit-smart-cutebot/">ElecFreaks micro:bit Smart Cutebot wiki</a>, the manufacturer's
+        own documentation, which means ElecFreaks ran them on the real car before we
+        taught them. The course covers 14 of those cases and adds one introduction
+        chapter. Case 13 is left out: its receiving program is word for word the same as
+        Case 12's, and it needs a joystick that is not in the kit &mdash; a new part
+        rather than a new idea.</p>
+      <p class="aux-lead">Where a lesson departs from the wiki program, the reason is
+        written down and a check compares the printed code against the original on every
+        build. That is also why the course is 15 chapters and not more: a chapter
+        needs a wiki case behind it.</p>
+    </section>
+
+    <section class="aux-section">
+      <div class="aux-kicker">The extra work</div>
+      <h2 class="aux-h2">Extend is where the depth is</h2>
+      <p class="aux-lead">Because the chapter count is fixed by the source, the room to
+        stretch a strong pair is in the <strong>Extend</strong> projects. Those tasks are
+        ours, not the wiki's, so the course deliberately <strong>does not hand out
+        finished code</strong> for them &mdash; nobody has run it on a real car, and we
+        will not claim it works. Students get the goal, a flowchart to plan against, and a
+        picture of what success looks like. A pair that is properly stuck can open a
+        folded hint with one or two key blocks in it.</p>
+      <p class="aux-lead">Every Extend task's plan is printed in the teacher block at the
+        bottom of that chapter's page, so you can see the intended shape without putting
+        it in front of the class.</p>
+    </section>
+
+    <section class="aux-section">
+      <div class="aux-kicker">Checking understanding</div>
+      <h2 class="aux-h2">Check-ups, attendance and progress</h2>
+      <p class="aux-lead">Each chapter has a matching check-up that is marked on screen
+        the moment a student presses Finish. The pass mark is
+        <strong>70%</strong>, and results are reported across
+        five areas: Concept · Reading · Debug · Building · Talk. Answers are never on the student's page.</p>
+      <p class="aux-lead">Attendance and results are kept per learner on
+        <strong>this computer</strong> and shown on the
+        <a href="progress.html">progress page</a>, which is also where a student signs in.
+        Nothing is sent anywhere unless a check-up result is mailed on purpose.</p>
+    </section>
+
+
+  <section class="aux-section" id="pacing">
+    <div class="aux-kicker">After school</div>
+    <h2 class="aux-h2">Pacing — one chapter, one session</h2>
+    <p class="aux-lead">Micro:bit with Cutebot is built for after-school sessions that complete and extend what class time reaches. One chapter is one session, and its check-up closes it. A session is about 45 minutes. At one session a week the whole course is 15 weeks; the table counts each level from its real chapter count.</p>
+    <div class="aux-card"><table class="aux-table aux-table--stack">
+      <thead><tr><th>Level</th><th>Grade</th><th>Chapters</th><th>At one session a week</th><th>Other courses at this stage</th></tr></thead>
+      <tbody><tr><td class="key" data-label="Level">Level 1 <span class="sub">Driver</span></td><td data-label="Grade">Grades 6–⁠9</td><td data-label="Chapters">5</td><td data-label="At one session a week">5 weeks</td><td data-label="Other courses at this stage">Micro:bit STEM, Python STEM, Digital Citizen</td></tr><tr><td class="key" data-label="Level">Level 2 <span class="sub">Signaler</span></td><td data-label="Grade">Grades 6–⁠9</td><td data-label="Chapters">2</td><td data-label="At one session a week">2 weeks</td><td data-label="Other courses at this stage">Micro:bit STEM, Python STEM, Digital Citizen</td></tr><tr><td class="key" data-label="Level">Level 3 <span class="sub">Guard</span></td><td data-label="Grade">Grades 6–⁠9</td><td data-label="Chapters">2</td><td data-label="At one session a week">2 weeks</td><td data-label="Other courses at this stage">Micro:bit STEM, Python STEM, Digital Citizen</td></tr><tr><td class="key" data-label="Level">Level 4 <span class="sub">Scout</span></td><td data-label="Grade">Grades 6–⁠9</td><td data-label="Chapters">2</td><td data-label="At one session a week">2 weeks</td><td data-label="Other courses at this stage">Micro:bit STEM, Python STEM, Digital Citizen</td></tr><tr><td class="key" data-label="Level">Level 5 <span class="sub">Commander</span></td><td data-label="Grade">Grades 6–⁠9</td><td data-label="Chapters">3</td><td data-label="At one session a week">3 weeks</td><td data-label="Other courses at this stage">Micro:bit STEM, Python STEM, Digital Citizen</td></tr><tr><td class="key" data-label="Level">Level 6 <span class="sub">Seeker</span></td><td data-label="Grade">Grades 6–⁠9</td><td data-label="Chapters">1</td><td data-label="At one session a week">1 week</td><td data-label="Other courses at this stage">Micro:bit STEM, Python STEM, Digital Citizen</td></tr></tbody>
+    </table></div>
+    <div class="aux-beats"><div class="aux-beat"><div class="aux-beat__head"><span class="aux-beat__ico" aria-hidden="true">📅</span><span>One session a week</span></div><div class="aux-beat__what">Level 1 takes 5 weeks; the whole course takes 15 weeks. At two sessions a week it takes 9 weeks.</div></div><div class="aux-beat"><div class="aux-beat__head"><span class="aux-beat__ico" aria-hidden="true">➕</span><span>Two or three sessions a week</span></div><div class="aux-beat__what">Add a second course (a lane) instead of racing ahead. Going faster through one course thins it out. A lane keeps the extra time useful — for example Micro:bit STEM, Python STEM, Digital Citizen. The table shows which ones fit each level’s grade.</div></div><div class="aux-beat"><div class="aux-beat__head"><span class="aux-beat__ico" aria-hidden="true">🔁</span><span>Missed a session</span></div><div class="aux-beat__what">Start the next session with the missed chapter’s Fix It and its check-up — about a quarter of a session — then join the class on the new chapter.</div></div></div>
+  </section>
+
+    <div class="aux-note">
+      <strong>In one sentence:</strong> put the car on the floor early, let the pair
+      predict before they download, let the Drive Test be the proof, and change the
+      batteries before you blame the code.
+    </div>
+  </div>
+
+<p class="bref-link-wrap"><a class="btn btn--ghost bref-link" href="blocks.html">🧱 All the blocks we use</a></p>
+</main>
+<edux-footer variant="page" logo="_assets/icons/favicon.svg"
+  home-href="index.html" brand="Micro:bit with Cutebot"></edux-footer>
+<script>
+if("serviceWorker" in navigator && location.protocol.startsWith("http"))addEventListener("load",function(){navigator.serviceWorker.register("sw.js",{scope:"./"}).catch(function(){});});
+</script>
+</body>
+</html>

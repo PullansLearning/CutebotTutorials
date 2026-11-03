@@ -1,0 +1,1 @@
+{"asks": {"p1": {"correct": "A", "why": "Infrared is light, and light needs a clear path. If the receiver never sees the flash, `on IR receiving` never runs, and the car simply carries on with its last command."}}}

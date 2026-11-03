@@ -1,0 +1,1 @@
+{"asks": {"p1": {"correct": "C", "why": "35 is greater than 2, but it is not less than 20. `and` needs both halves to be true, so the test fails and the turn is skipped. A wall 35 cm away is not close enough to worry about yet."}}}

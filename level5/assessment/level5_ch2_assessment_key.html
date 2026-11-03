@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en" data-edux-account="cb:" data-edux-login="../../progress.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Check-up · Level 5 · Chapter 2 — Remote Control with the Accelerometer — Teacher page</title>
+<link rel="preload" href="../../_assets/fonts/baloo2.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../_assets/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="description" content="Teacher Guide and check-up answer key">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://pullanslearning.github.io/CutebotTutorials/level5/assessment/level5_ch2_assessment_key">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Micro:bit with Cutebot">
+<meta property="og:title" content="Teacher page — Level 5 · Chapter 2">
+<meta property="og:description" content="Teacher Guide and check-up answer key">
+<meta property="og:url" content="https://pullanslearning.github.io/CutebotTutorials/level5/assessment/level5_ch2_assessment_key">
+<meta property="og:image" content="https://pullanslearning.github.io/CutebotTutorials/_assets/icons/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Micro:bit with Cutebot — The code stops being a picture on a screen. It becomes a car that moves.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Teacher page — Level 5 · Chapter 2">
+<meta name="twitter:description" content="Teacher Guide and check-up answer key">
+<meta name="twitter:image" content="https://pullanslearning.github.io/CutebotTutorials/_assets/icons/og.png">
+<meta name="theme-color" content="#0a5718">
+<link rel="icon" href="../../_assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../_assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="../../manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Cutebot">
+<script defer src="../../_assets/js/edux-center.js?v=a5d7326a"></script>
+<script defer src="../../_assets/js/edux-buddy.js?v=0ff6d56a" data-x="../../_assets/js/edux-buddy-extra.js?v=6fa576db" data-l="../../_assets/js/edux-buddy-lines.js?v=e0f2cd04"></script>
+<link rel="stylesheet" href="../../_assets/css/cutebot.css?v=d442594d">
+<script src="../../_assets/js/edux-chrome.js?v=b8e2b2c5"></script>
+<style>:root{ --level:#be90d5; --level-deep:#882db6; --level-soft:#f5ecf9; --level-ink:#461e5b; }
+body{ background:var(--color-bg); color:var(--color-ink); overflow-x:hidden; }</style>
+</head>
+<body>
+
+
+<edux-assess-header
+  kicker="Check-up · Level 5 · Chapter 2 · 20 min"
+  title="Remote Control with the Accelerometer — Teacher page"
+  lesson-href="level5_ch2_assessment.html" lesson-label="← Back to the chapter"
+  home-href="../index.html" home-label="🏠 Level 5 Chapters"></edux-assess-header>
+
+
+
+
+<div class="aux-wrap" id="main-content">
+
+  
+
+  
+<section class="aux-section teacher-guide"><div class="aux-kicker">The lesson</div><h2 class="aux-h2">🧑‍🏫 Teacher Guide</h2>
+    <h4 class="section-label">📝 Notes for this chapter</h4><p>Two boards again. The division by 10 is the whole trick: tilt comes back in milli-g, roughly -1024 to 1024, and wheel speed only goes to 100. Last chapter&#x27;s rule still holds — a number means nothing until the car decides — but now the agreement also fixes the scale: divide by 10, and what arrives is already a wheel speed. Pairs keep their own group numbers; the 1 in the code is the wiki&#x27;s. MakeCode links — remote <code>_Pv01m2ehfcKT</code>, car <code>_VYxbiCVtE962</code>. Fix It answer: the raw tilt is sent without dividing, so the wheels sit at full speed for almost any lean and steering disappears. Source: ElecFreaks wiki, Case 12 &quot;Remote Control the Cutebot with micro:bit Accelerometer&quot;.</p><h4 class="section-label">🚀 Extend — where each task goes</h4><div class="tg-ext"><span class="tg-ext__task">🟢 <b>Add a dead zone so a small tilt does nothing.</b><br>Watch what the numbers do when the remote is nearly level → Pick a size for the zone → Set the speed to 0 inside it → Test that the car sits still on a table</span><span class="tg-ext__task">🟡 <b>Send a word instead of a number and make the car act on it.</b><br>Look at how name and value travel together → Decide on two or three words → Send one per tilt direction → Branch on the word at the car</span><span class="tg-ext__task">🔴 <b>Make the car obey the remote only after you arm it — press A to arm, press B to stop it dead.</b><br>Keep a number on the remote that says armed or not → Set it on button A and clear it on button B → Send 0 0 while it is not armed → Test by pressing B and putting the remote down</span></div>
+    <h4 class="section-label">🧩 The blocks you need today</h4><div class="tg-grid"><div class="tg-teach"><b class="tg-block">input_acceleration</b><p class="tg-teach__plain">Reads the pull on the micro:bit along one axis — tilt it and the number changes.</p><pre class="tg-teach__demo">basic.showNumber(input.acceleration(Dimension.X))</pre><p class="tg-teach__shows"><b>You see:</b> About 0 when it lies still and flat, and about 1000 straight down.</p></div><div class="tg-teach"><b class="tg-block">radio_send_value</b><p class="tg-teach__plain">Sends a name and a number together.</p><pre class="tg-teach__demo">radio.setGroup(7)
+radio.sendValue(&quot;speed&quot;, 80)</pre><p class="tg-teach__shows"><b>You see:</b> The other micro:bit receives both parts in one message.</p></div><div class="tg-teach"><b class="tg-block">radio_on_value</b><p class="tg-teach__plain">Runs the blocks inside when a name and number arrive together.</p><pre class="tg-teach__demo">radio.setGroup(7)
+radio.onReceivedValue(function (name, value) {
+    if (name == &quot;speed&quot;) {
+        cuteBot.motors(value, value)
+    }
+})</pre><p class="tg-teach__shows"><b>You see:</b> Nothing until a message comes in, then the blocks inside run.</p></div><div class="tg-teach"><b class="tg-block">math_arithmetic</b><p class="tg-teach__plain">Adds, subtracts, multiplies, or divides two numbers.</p><pre class="tg-teach__demo">basic.showNumber(20 + 22)</pre><p class="tg-teach__shows"><b>You see:</b> One number, which you drop into another block.</p></div></div>
+</section>
+<section class="aux-section"><h2 class="aux-h2">Answer key</h2><div class="aux-card"><table class="aux-table"><tbody><tr><td>Concept</td><td>c1 → <b>A</b>, c2 → <b>B</b>, c3 → <b>C</b></td></tr><tr><td>Reading</td><td>r1 → <b>B</b>, r2 → <b>C</b>, r3 → <b>C</b>, r4 → <b>A</b></td></tr><tr><td>Debug</td><td>d1 → <b>D</b>, d2 → <b>A</b></td></tr><tr><td>Building</td><td>b1 → <b>D</b>, b2 → <b>C</b></td></tr></tbody></table></div><h3 class="aux-h3">Talk rubric</h3><p class="aux-lead">Strong — says y carries forward/back and x carries the side lean, and mixing them (sum for one wheel, difference for the other) turns two tilts into two wheel speeds. Developing — says both are needed without explaining how they combine. Needs Focus — treats x and y as separate cars or separate commands.</p></section>
+
+</div>
+
+<p class="bref-link-wrap"><a class="btn btn--ghost bref-link" href="../../blocks.html">🧱 All the blocks we use</a></p>
+
+
+<edux-footer offline
+  variant="page"
+  logo="../../_assets/icons/favicon.svg"
+  home-href="../../index.html"
+  brand="Micro:bit with Cutebot"></edux-footer>
+
+<script src="../../_assets/js/assess-skin.js?v=1d3084f1"></script>
+
+<script>
+window.ASSESS_CFG=null;
+</script>
+<script>
+if("serviceWorker" in navigator && location.protocol.startsWith("http"))addEventListener("load",function(){navigator.serviceWorker.register("../../sw.js",{scope:"../../"}).catch(function(){});});
+</script>
+</body>
+</html>

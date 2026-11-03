@@ -1,0 +1,1 @@
+{"asks": {"p1": {"correct": "B", "why": "130 is not less than 10, so the test is false and the `else` branch runs — all three colors set to 0, which is off. The lights only come on when the reading drops below 10."}}}
